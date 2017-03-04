@@ -7,8 +7,7 @@ body {
 
 #logo {
 	
-	margin-right: 0;
-	margin-top: 0;
+	float: left;
 	padding-left: 0.8em;
 	padding-top: 0.4em;
 	color: white;
@@ -20,9 +19,16 @@ body {
 
 	height: 5em;
 	width: 100%;
+	z-index: 5;
+	background-color: #1C1C1C;
+	position: absolute;
+
+}
+
+.onTop {
+
 	position: fixed;
 	top: 0;
-	background-color: #1C1C1C;
 
 }
 
@@ -106,6 +112,30 @@ a:hover {
 	-ms-user-select: none;
 }
 
+.image-wrapper {
+
+	height: 40em;
+	width: 100%;
+
+}
+
+.slides {
+
+	height: 40em;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	z-index: 1;
+	object-fit: cover;
+
+}
+
+.active {
+
+	z-index: 3;
+
+}
+
 #quote-wrapper {
 
 	height: 40em;
@@ -125,8 +155,6 @@ a:hover {
 #quote {
 
 	font-size: 3em;
-	font-family: ;
-	padding-bottom: 0.5em;
 
 }
 
@@ -140,7 +168,7 @@ a:hover {
 #video-wrapper {
 
 	display: inline-block;
-	padding-top: 4em;
+	padding-top: 9em;
 	padding-bottom: 4em;
 
 }
@@ -182,10 +210,6 @@ a:hover {
 
 	font-size: 1.5em;
 	margin-top: 2em;
-
-}
-
-@media only screen and (max-width: 500px) {
 
 }
 
