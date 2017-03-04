@@ -5,6 +5,12 @@ body {
 
 }
 
+:root {
+	--header-color: #1C1C1C;
+	--main-color-dark: #232323;
+	--main-color-bright: #e2e2e2;
+}
+
 #logo {
 	
 	float: left;
@@ -20,7 +26,7 @@ body {
 	height: 5em;
 	width: 100%;
 	z-index: 5;
-	background-color: #1C1C1C;
+	background-color: var(--header-color);
 	position: absolute;
 
 }
@@ -80,17 +86,30 @@ a:visited {
 }
 
 a:hover {
-
-    color: red;
 	text-decoration: none;
+}
 
+a.twitter:hover {
+    color: #1da1f2;
+}
+
+a.facebook:hover {
+    color: #3b5998;
+}
+
+a.youtube:hover {
+    color: #cd201f;
+}
+
+a.instagram:hover {
+    color: #c13584;
 }
 
 
 .container {
 
 	width: 100%;
-	background-color: #e2e2e2;
+	background-color: var(--main-color-bright);
 
 	/*display: flex;*/
 	flex-wrap: wrap;
@@ -98,18 +117,6 @@ a:hover {
 	align-items: center;
 	text-align: center;
 
-}
-
-
-#welcome {
-
-	width: 50%;
-	padding: 2em;
-	background: rgba(255,255,255,0.5);
-	border-radius: 20px;
-	-webkit-user-select: none;      
-	-moz-user-select: none;
-	-ms-user-select: none;
 }
 
 .image-wrapper {
@@ -160,15 +167,15 @@ a:hover {
 
 #bio {
 
-	background-color: #232323;
-	color: #e2e2e2;
+	background-color: var(--main-color-dark);
+	color: var(--main-color-bright);
 
 }
 
 #vita {
 	
-	background-color: #e2e2e2;
-	color: #232323;
+	background-color: var(--main-color-bright);
+	color: var(--main-color-dark);
 
 }
 
@@ -238,9 +245,10 @@ a:hover {
 	#logo {
 		float: none;
 		padding-left: 0em;
+		font-size: 4em;
 	}
 	.header {
-		height: 10em;
+		height: 12em;
 	}
 	.social-media-container {
 		float: none;
@@ -253,6 +261,9 @@ a:hover {
 	}
 	.flowingtext {
 		font-size: 1em;
+	}
+	#video-wrapper {
+		padding-top: 14em;
 	}
 	#video-wrapper iframe {
 		margin: 20px;

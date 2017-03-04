@@ -2,6 +2,7 @@ $(document).ready(function () {
 	setInterval('cycleImages()', 5000);
 	menuTopOnScroll();
 	videoFitter();
+	imageWrapperHover();
 });
 
 $headerDefaultPos = $('.header').position().top;
@@ -35,8 +36,18 @@ function menuTopOnScroll () {
 function videoFitter () {
 	$(window).resize(function () {
 		$vidWidth = $('#video-wrapper iframe').width();
-		console.log($vidWidth);
 		$('#video-wrapper iframe').height($vidWidth/(16/9));
 	});
+}
+
+function imageWrapperHover () {
+	$('.header').hover(
+		function() {
+			$('.header').animate({opacity:0.8}, 200);
+		},
+		function() {
+			$('.header').animate({opacity: 1}, 200);
+		}
+	);
 }
 
