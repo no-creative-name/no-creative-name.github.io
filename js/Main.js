@@ -1,6 +1,7 @@
 $(document).ready(function () {
 	setInterval('cycleImages()', 5000);
 	menuTopOnScroll();
+	videoFitter();
 });
 
 $headerDefaultPos = $('.header').position().top;
@@ -29,6 +30,13 @@ function menuTopOnScroll () {
 		}
 
 	});
+}
 
+function videoFitter () {
+	$(window).resize(function () {
+		$vidWidth = $('#video-wrapper iframe').width();
+		console.log($vidWidth);
+		$('#video-wrapper iframe').height($vidWidth/(16/9));
+	});
 }
 

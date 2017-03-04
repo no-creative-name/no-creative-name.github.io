@@ -136,35 +136,6 @@ a:hover {
 
 }
 
-#quote-wrapper {
-
-	height: 40em;
-	width: 100%;
-
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-
-	background-image: url("../assets/cover.jpg");
-	background-size: cover;
-
-}
-
-#quote {
-
-	font-size: 3em;
-
-}
-
-#quote-person {
-
-	font-family: ; 
-	text-align: right;
-
-}
-
 #video-wrapper {
 
 	display: inline-block;
@@ -264,14 +235,28 @@ a:hover {
 }
 
 @media only screen and (max-width: 600px) {
-	.logo {
-		text-align: center;
+	#logo {
+		float: none;
+		padding-left: 0em;
+	}
+	.header {
+		height: 10em;
+	}
+	.social-media-container {
+		float: none;
 	}
 	#welcome {
 		width: 90%;
 	}
-	#portrait {
-		display: none;
+	.headline {
+		font-size: 3em;
+	}
+	.flowingtext {
+		font-size: 1em;
+	}
+	#video-wrapper iframe {
+		margin: 20px;
+		width: 80%;
 	}
 }
 
