@@ -9,6 +9,19 @@ body {
 	--header-color: #1C1C1C;
 	--main-color-dark: #232323;
 	--main-color-bright: #e2e2e2;
+	--main-color-color: #596b9e;
+}
+
+/* HEADER */
+
+.header {
+
+	height: 5em;
+	width: 100%;
+	z-index: 5;
+	background-color: var(--header-color);
+	position: absolute;
+
 }
 
 #logo {
@@ -21,16 +34,6 @@ body {
 	display: inline-block;
 }
 
-.header {
-
-	height: 5em;
-	width: 100%;
-	z-index: 5;
-	background-color: var(--header-color);
-	position: absolute;
-
-}
-
 .onTop {
 
 	position: fixed;
@@ -38,27 +41,20 @@ body {
 
 }
 
-.menu {
-
-	display: inline-block;
-	margin-left: 3em;
-
-}
-
-.menu-point {
-
-	display: inline-block;
-	margin-left: 1em;
-
-}
-
-.social-media-container {
+#social-media-container-top {
 
 	color: white;
 	display: inline-block;
 	float: right;
 	font-size: 2.5em;
 	height: 5em;
+
+}
+
+#social-media-container-bottom {
+
+	font-size: 2.5em;
+	margin-top: 0.5em;
 
 }
 
@@ -71,18 +67,22 @@ body {
 
 }
 
-a:link {
-
-	color: white;
-	text-decoration: none;
+.black {
 
 }
 
-a:visited {
-
+a:link {
 	color: white;
 	text-decoration: none;
+}
 
+a:visited {
+	color: white;
+	text-decoration: none;
+}
+
+a.black:visited {
+	color: var(--main-color-bright);
 }
 
 a:hover {
@@ -105,6 +105,7 @@ a.instagram:hover {
     color: #c13584;
 }
 
+/* CONTAINER */
 
 .container {
 
@@ -165,19 +166,28 @@ a.instagram:hover {
 
 }
 
-#bio {
+#sec-black {
 
 	background-color: var(--main-color-dark);
 	color: var(--main-color-bright);
 
 }
 
-#vita {
+#sec-grey {
 	
 	background-color: var(--main-color-bright);
 	color: var(--main-color-dark);
 
 }
+
+#sec-color {
+	
+	background-color: var(--main-color-bright);
+	color: var(--main-color-color);
+
+}
+
+
 
 .headline {
 
@@ -190,6 +200,8 @@ a.instagram:hover {
 	margin-top: 2em;
 
 }
+
+/* SOCICON */
 
 @font-face {
   font-family: "socicon";
